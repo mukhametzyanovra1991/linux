@@ -3,7 +3,7 @@
 #install required packages
 apt -y install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
 
-#join to active directory domain b17.local
+#join to active directory domain
 realm join -U $1 $2
 
 #enable auto-create user homedir
