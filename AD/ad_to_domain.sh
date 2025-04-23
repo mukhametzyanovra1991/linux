@@ -17,7 +17,7 @@ Session:
 EOF
 
 #enable mkhomedir
-pam-auth-update
+pam-auth-update --enable mkhomedir
 
 #restart sssd daemon
 sudo systemctl restart sssd
