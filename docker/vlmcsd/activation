@@ -10,3 +10,10 @@ Windows Server 2019 Datacenter 	WMDGN-G9PQG-XVVXX-R3X43-63DFG
 Windows Server 2019 Essentials 	WVDHN-86M7X-466P6-VHXV7-YY726
 Windows 11 Pro
 Windows 10 Pro 	W269N-WFGWX-YVC9B-4J6C9-T83GX
+
+Windows Server 2019 Standard activation example
+slmgr.vbs -upk
+slmgr.vbs -ipk N69G4-B89J2-4G8F4-WWYCC-J464C
+slmgr.vbs -skms s37-docker01:1688
+slmgr.vbs -ato
+slmgr.vbs -dlv
