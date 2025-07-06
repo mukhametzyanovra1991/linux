@@ -1,0 +1,19 @@
+version: "3"
+services:
+  vlmcsd:
+    image: mikolatero/vlmcsd
+    container_name: vlmcsd
+    networks:
+      vlmcsd:
+        #ipv4_address: 10.42.42.42
+    ports:
+      - "1688:1688"
+    restart: unless-stopped
+
+networks:
+  vlmcsd:
+    driver: bridge
+    #ipam:
+      #driver: default
+      #config:
+        #- subnet: 10.42.42.0/24
