@@ -1,0 +1,24 @@
+---
+- name: install kaspersky network agent
+  hosts: all
+    #  gather_facts: no
+  tasks:
+
+    - name: Create directory structure
+      ansible.windows.win_file:
+        path: '%systemdrive%\inst'
+        state: directory
+
+    - name: copy install package to systemdrive
+      ansible.windows.win_copy:
+        src: ../../packages/knainstaller.msi
+        dest: '%systemdrive%\inst\knainstaller.msi'
+
+    - name: Install kaspersky network agent
+      ansible.windows.win_package:
+        path: C:\inst\knainstaller.msi
+        product_id: '{ED1C2D7E-5C7A-48D8-A697-57D1C080ABA7}'
+        arguments:
+          - /qn
+          - SERVERADDRESS=ks.domain.ru
+          - EULA=1
