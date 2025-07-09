@@ -1,0 +1,10 @@
+[ch42]
+ch42-reg1
+
+[ch42:vars]
+ansible_port=5985
+ansible_user=user@domain.ru
+ansible_winrm_transport=kerberos
+ansible_connection=winrm
+ansible_winrm_scheme=http
+ansible_winrm_server_cert_validation=ignore
